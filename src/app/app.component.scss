@@ -1,0 +1,14 @@
+@import 'abstracts/variables';
+@import 'src/app/sidebar/sidebar.component.scss';
+@import 'src/app/header/header.component.scss';
+@import 'src/app/about-me/about-me.component.scss';
+@import 'src/app/skills/skills.component.scss';
+@import 'src/app/projects/projects.component.scss';
+@import 'src/app/footer/footer.component.scss';
+
+.container {
+  display: grid;
+  grid-template-rows: 70vh min-content repeat(2, min-content);
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+
