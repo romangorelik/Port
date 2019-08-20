@@ -4,12 +4,18 @@
   background-color: $color-secondary;
   grid-column: 1 / 2;
   grid-row: 1 / -1;
+
+  z-index: 2;
 }
 
 .sidebar {
   position: relative;
   display: flex;
   justify-content: center;
+
+  &__checkbox {
+    display: none;
+  }
 
   &__btn {
     height: 5rem;
@@ -19,6 +25,9 @@
     display: inline-block;
     position: fixed;
     top: 5rem;
+
+    transition: all .5s;
+    z-index: 30;
 
     &::after {
       content: '';
@@ -48,5 +57,42 @@
       transform: translate((-50%, -50%)) scale(1);
       box-shadow: .5px .5px 1rem rgba(#000, .8);
     }
+  }
+
+  &__nav {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: $color-secondary;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    transition: all .3s ease-in-out;
+
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__list {
+    list-style: none;
+    text-align: center;
+  }
+
+  &__item {
+    margin: 1rem;
+    font-size: 2rem;
+    color: $color-tertiary; 
+  }
+
+  &__checkbox:checked~&__nav {
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
   }
 }
