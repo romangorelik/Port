@@ -1,4 +1,53 @@
+@import 'abstracts/variables';
+
 .about-me-container {
-  background-color: green;
+  background-color: $color-primary;
   grid-column: col-start 7 / full-end;
+  padding: 3rem;
+}
+
+.about-me {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+
+  &__image {
+    width: 15rem;
+    height: 15rem;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__list {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: min-content max-content;
+    grid-gap: 2rem;
+    align-items: center;
+  }
+
+  &__icon {
+    font-size: 1.6rem;
+    color: $color-tertiary;
+  }
+
+  &__detail {
+    color: $color-tertiary;
+    font-size: 1.6rem;
+
+    a:link,
+    a:visited {
+      text-decoration: none;
+      color: currentColor;
+    }
+  }
 }

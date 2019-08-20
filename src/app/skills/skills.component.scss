@@ -1,5 +1,4 @@
 .skills-container {
-  background-color: pink;
   grid-column: center-start / center-end;
 
   margin: 15rem 0;
@@ -23,33 +22,34 @@
     transform: translateY(-1rem);
 
     &--react {
-
+      color: #00d8ff;
     }
 
     &--angular {
-      
+      color: #dd0130;
     }
 
     &--scss {
-      
+      color: #cd6598;
     }
 
     &--nodejs {
-      
+      color: #76ad64;
     }
 
     &--db {
-      
+      color: #696969;
     }
 
-    &--aws {
-      
+    &--cloud {
+      color: #ff9800;
     }
 
   }
 
   &__text {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
+    text-align: justify;
   }
 
 }
