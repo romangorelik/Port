@@ -7,7 +7,7 @@
   grid-column: full-start / col-end 6;
 
   padding: 2rem;
-  padding-top: 10rem;
+  padding-top: 5rem;
 }
 
 .header {
@@ -23,7 +23,8 @@
   font-size: 2rem;
   color: $color-tertiary;
 
-  &__interests {
+  &__interests,
+  &__nav {
     margin-top: 5rem;
   }
 }
