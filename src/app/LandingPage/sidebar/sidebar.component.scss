@@ -117,4 +117,10 @@
       height: 200vh;
     }
   }
+
+  &__checkbox:checked~&__btn {
+    @include respond(tab-land) {
+      position: fixed;
+    }
+  }
 }
