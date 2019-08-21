@@ -1,4 +1,5 @@
 @import 'abstracts/variables';
+@import 'abstracts/mixins';
 
 .header-container {
   background-image: linear-gradient(rgba($color-primary-light, .9), rgba($color-primary-light, .9)), url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
@@ -22,6 +23,10 @@
 
   font-size: 2rem;
   color: $color-tertiary;
+
+  @include respond(phone) {
+    font-size: 1.5rem;
+  }
 
   &__interests,
   &__nav {

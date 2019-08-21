@@ -1,10 +1,15 @@
 @import 'abstracts/variables';
+@import 'abstracts/mixins';
 
 .sidebar-container {
   background-color: $color-secondary;
-  min-height: 100vh;
   grid-column: 1 / 2;
   grid-row: 1 / -1;
+
+  @include respond(tab-land) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
 
   z-index: 2;
 }
@@ -26,6 +31,11 @@
     display: inline-block;
     position: fixed;
     top: 5rem;
+
+    @include respond(tab-land) {
+      position: relative;
+      top: .5rem;
+    }
 
     transition: all .5s;
     z-index: 30;
@@ -74,6 +84,11 @@
     visibility: hidden;
     width: 0;
 
+    @include respond(tab-land) {
+      width: 100%;
+      height: 0;
+    }
+
     display: flex;
     justify-content: center;
   }
@@ -97,5 +112,9 @@
     opacity: 1;
     visibility: visible;
     width: 100%;
+
+    @include respond(tab-land) {
+      height: 200vh;
+    }
   }
 }
