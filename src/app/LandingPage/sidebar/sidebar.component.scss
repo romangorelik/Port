@@ -2,6 +2,7 @@
 
 .sidebar-container {
   background-color: $color-secondary;
+  min-height: 100vh;
   grid-column: 1 / 2;
   grid-row: 1 / -1;
 
@@ -89,6 +90,7 @@
     color: $color-tertiary; 
     cursor: pointer;
     text-transform: uppercase;
+    outline: none;
   }
 
   &__checkbox:checked~&__nav {

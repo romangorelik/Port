@@ -5,7 +5,7 @@ import { HomeComponent } from './LandingPage/home/home.component';
 
 
 const routes: Routes = [
-  {path: 'home', component: BigoComponent},
+  {path: 'big-o', component: BigoComponent},
   {path: '', component: HomeComponent},
   {path: '**', redirectTo: '', pathMatch: 'full'},
 ];
