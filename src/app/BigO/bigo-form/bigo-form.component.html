@@ -1,0 +1,10 @@
+<div *ngIf='admin' class="bigo">
+  <form (ngSubmit)="sendBigOData()" class="bigo__form">
+    <textarea type="text" [(ngModel)]='title' name='title' placeholder='Title' class="bigo__title" required></textarea>
+    <textarea [(ngModel)]='text' name='text' rows="5" cols="80" placeholder="Text" class="bigo__text" required></textarea>
+    <button class="bigo__btn">Submit</button>  
+  </form>
+</div>
+
+{{text}}
+{{title}}

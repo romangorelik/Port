@@ -1,0 +1,83 @@
+@import 'abstracts/variables';
+
+.bigo-form-container {
+  grid-column: center-start / center-end;
+}
+
+.bigo {
+  padding: 5rem 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+
+
+  &__form {
+    // display: flex;
+    // flex-direction: column;
+    display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+    & > *:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__title {
+    grid-column: 4 / 10;
+    height: 5rem;
+  }
+
+  &__text {
+    grid-column: 1 / -1;
+  }
+
+  &__title,
+  &__text {
+    font-size: 1.5rem;
+    color: $color-tertiary;
+    font-family: inherit;
+    display: block;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    border: none;
+    background-color: $color-primary-light;
+    border-bottom: 3px solid transparent;
+
+    transition: all .4s;
+  }
+
+  &__btn {
+    grid-column: 6 / 8;
+    padding: 1rem 2rem;
+    display: block;
+    border: none;
+    border-radius: 60px;
+    color: $color-primary;
+    background-color: $color-tertiary;
+
+    transition: all .3s;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 .5rem 1rem rgba(black, .8);
+    }
+
+    &:active {
+      transform: scale(1);
+      box-shadow: 0 .5rem .5rem rgba(black, .8);
+    }
+  }
+
+  &__text:focus,
+  &__title:focus,
+  &__btn:focus {
+    outline: none;
+  }
+
+  &__title:focus:invalid,
+  &__text:focus:invalid {
+    border-bottom: 3px solid red;
+  }
+}

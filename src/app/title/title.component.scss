@@ -1,0 +1,29 @@
+@import 'abstracts/variables';
+
+.title-container {
+  grid-row: 1 / 2;
+  grid-column: full-start / full-end;
+  background-image: linear-gradient(rgba($color-tertiary, .5), rgba($color-tertiary, .5)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80');
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+
+  &__text {
+    color: transparent;
+    font-size: 6rem;
+    letter-spacing: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px black;
+
+    background-image: linear-gradient(to right, $color-primary, $color-quaternary);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
