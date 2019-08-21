@@ -1,0 +1,13 @@
+@import 'abstracts/variables';
+@import '../sidebar/sidebar.component.scss';
+@import '../header/header.component.scss';
+@import '../about-me/about-me.component.scss';
+@import '../skills/skills.component.scss';
+@import '../projects/projects.component.scss';
+
+.container {
+  display: grid;
+  grid-template-rows: 70vh min-content min-content;
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+

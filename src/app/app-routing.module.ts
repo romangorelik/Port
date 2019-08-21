@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
+import { BigoComponent } from './BigO/bigo/bigo.component';
+import { HomeComponent } from './LandingPage/home/home.component';
+
 
 const routes: Routes = [
-  {path: '', component: AppComponent},
-  {path: '**', redirectTo: '', pathMatch: 'full'}
+  {path: 'home', component: BigoComponent},
+  {path: '', component: HomeComponent},
+  {path: '**', redirectTo: '', pathMatch: 'full'},
 ];
 
 @NgModule({
